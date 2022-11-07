@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de troco</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <section>
+        <div class="tit">
+            <img src="download.png" alt="Interup">
+            <h1>Troco de moedas</h1>
+        </div>
+        <div class="conteiner">
+            <form>
+                    <label>Valor Recebido</label><br>
+                    <input type="text" onchange="convertInttoFloat(this)" id="value"><br>
+                    <label>Preço do produto</label><br>
+                    <input type="number" onchange="convertInttoFloat(this)" id="price"><br>
+                    <script>
+                        function convertInttoFloat(a){
+                            var val = parseFloat(a.value);
+                            a.value = (isNaN(val)) ? '' : val.toFixed(2);
+                        }
+                    </script>
+                
+                <button type="button" id="confirmButton" class="confirmButton">Confirmar</button>
+                <br>
+                <br>
+                <div class="output" id="output1">Quantidade:</div>
+            </form>
+        </div>
+    </section>
+    
+    <script src="change.js"></script>
+</body>
+</html>
